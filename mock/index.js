@@ -6,13 +6,13 @@ module.exports = {
 		 * @author fed
 		 */
 		this.render.ftl("hello", {
-			name: "world "
+			name: "world  "
 		});
 	},
 	"get /": function(req, res) {
 		/**
 		 * test override in freemarker
 		 */
-		this.render.ftl("card/index");
+		this.render.ftl("portal/index");
 	}
 };

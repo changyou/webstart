@@ -7,8 +7,7 @@ seajs.config({
 
 	// 变量配置
 	vars: {
-		'locale': 'zh-cn',
-		'APP_URL': '32342'
+		'locale': 'zh-cn'
 	},
 	// 映射配置
 	// map: [

@@ -10,7 +10,7 @@
 <#global IMG_PATH   = APP_URL + "/img" />
 
 <#-- SITE INFO -->
-<#global APP_TITLE  = "畅游乐园" />
+<#global APP_TITLE  = "网站名称" />
 <#global STYLES_FILE_EXT = ".css" />
 <#global SCRIPT_FILE_EXT = ".js" />
 
@@ -27,3 +27,4 @@
 	<#global DEBUG = false />
 	<#global STYLES_FILE_EXT = ".less" />
 </#if>
+<#global USE_LESSJS = false />

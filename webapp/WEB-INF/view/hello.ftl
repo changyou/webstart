@@ -1,6 +1,18 @@
+<#include "/assets/imports.ftl" />
 
-Hello ${name}!
+<@override name="beforePage">
+	<@css file="${CSS_PATH}/portal/index.css" />
+</@override>
 
-<br/>
+<@override name="body">
 
-${DEBUG?string}
+	<div class="portal">
+		<a href="/">
+			<h3>返回</h3>
+		</a>
+		<p>Response: ${name}</p>
+	</div>
+
+</@override>
+
+<@extends name="/partials/html.ftl"/>

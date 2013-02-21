@@ -1,5 +1,5 @@
 define(function(require) {
 	var $ = require("$");
 
-	$("body").html("<h1>lol</h1>");
+	$("body").append("<h1>LOL~</h1>");
 });

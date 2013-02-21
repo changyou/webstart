@@ -6,10 +6,12 @@ seajs.config({
 	alias: {
 		"less": "gallery/less/1.3.1/less"
 	},
-	preload:[ "less" ],
+	// preload:[ "less" ],
 	debug: true
 });
 
+//TODO: USE seajs-less.js
+/*
 less = {
 	env: "development", // or "production"
 	async: false,       // load imports async
@@ -24,3 +26,4 @@ less = {
 	rootpath: ""		// a path to add on to the start of every url
 						//resource
 };
+*/

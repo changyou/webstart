@@ -15,7 +15,7 @@
 
 <#-- add css -->
 <#macro css file="">
-	<#if DEBUG && file?ends_with(".less")>
+	<#if DEBUG && USE_LESSJS && file?ends_with(".less")>
 		<@less file=file />
 		<#return />
 	</#if>
