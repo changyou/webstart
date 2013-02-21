@@ -9,7 +9,7 @@ module.exports = {
 			name: "world "
 		});
 	},
-	"get /card/index": function(req, res) {
+	"get /": function(req, res) {
 		/**
 		 * test override in freemarker
 		 */

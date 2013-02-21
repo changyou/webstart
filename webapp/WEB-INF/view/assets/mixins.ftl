@@ -3,16 +3,10 @@
 -->
 
 <#-- add js -->
-<#macro js file="" inline=false>
+<#macro js file="">
 	<#if file=="">
 		<script>
 			<#nested />
-		</script>
-		<#return />
-	</#if>
-	<#if inline>
-		<script>
-			<#include file parse=false />
 		</script>
 	<#else>
 		<script src="${file}"></script>
@@ -20,18 +14,23 @@
 </#macro>
 
 <#-- add css -->
-<#macro css file="" inline=false>
+<#macro css file="">
+	<#if DEBUG && file?ends_with(".less")>
+		<@less file=file />
+		<#return />
+	</#if>
 	<#if file=="">
 		<style type="text/css">
 			<#nested/>
 		</style>
-		<#return />
-	</#if>
-	<#if inline>
-		<style type="text/css"><#include file parse=false /></style>
 	<#else>
 		<link type="text/css" rel="stylesheet" href="${file}" />
 	</#if>
+</#macro>
+
+<#-- add less -->
+<#macro less file>
+	<link type="text/less" rel="stylesheet/less" href="${file}" />
 </#macro>
 
 <#-- load seajs -->
@@ -39,16 +38,9 @@
 	<#if main==""><#return /></#if>
 	<script src="${APP_URL}/js/modules/seajs/sea.js"></script>
 	<@js file=config />
-	<#if DEBUG==true>
+	<#if DEBUG>
 		<!-- JUST FOR DEVELOP -->
-		<@js>
-			seajs.config({
-				vars: {
-					"aaa": "fff"
-				},
-				debug: true
-			});
-		</@js>
+		<@js file=DEBUG_JS_PATH />
 		<!-- JUST FOR DEVELOP -->
 	</#if>
 	<@js>

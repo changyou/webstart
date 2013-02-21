@@ -1,0 +1,83 @@
+// fonts
+.ft-yahei { font-family: "雅黑","Arial Narrow",HELVETICA; }
+.ft-songti { font-family: "宋体","Arial Narrow",HELVETICA; }
+.ft-12px { font-size: 12px; }
+.ft-14px { font-size: 14px; }
+.ft-16px { font-size: 15px; }
+.ft-18px { font-size: 18px; }
+.ft-20px { font-size: 20px; }
+.ft-24px { font-size: 24px; }
+
+// text styles
+.tt-bold { font-weight: bold; }
+
+
+// position
+.fn-mg0 { margin: 0; }
+.fn-mg5 { margin: 5px; }
+.fn-mg10 { margin: 10px; }
+.fn-mg20 { margin: 20px; }
+
+.fn-mt0 { margin-top: 0; }
+.fn-mt5 { margin-top: 5px; }
+.fn-mt10 { margin-top: 10px; }
+.fn-mt20 { margin-top: 20px; }
+
+.fn-ml0 { margin-left: 0; }
+.fn-ml5 { margin-left: 5px; }
+.fn-ml10 { margin-left: 10px; }
+.fn-ml20 { margin-left: 20px; }
+
+.fn-mr0 { margin-right: 0; }
+.fn-mr5 { margin-right: 5px; }
+.fn-mr10 { margin-right: 10px; }
+.fn-mr20 { margin-right: 20px; }
+
+.fn-mb0 { margin-bottom: 0; }
+.fn-mb5 { margin-bottom: 5px; }
+.fn-mb10 { margin-bottom: 10px; }
+.fn-mb20 { margin-bottom: 20px; }
+
+//
+// functions
+
+// clearfix from http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix() {
+  *zoom:1;
+
+  &:before,
+  &:after {
+      content:"";
+      display:table;
+  }
+  &:after {
+      clear:both;
+  }
+}
+
+.ie6-pngfix(@png) {
+  background: transparent;
+  filter: e(%("progid:DXImageTransform.Microsoft.AlphaImageLoader(src='%d', sizingMethod='scale')", @png));
+}
+
+.opacity(@opacity: 1) {
+  @ieOpacity: @opacity * 100;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ieOpacity})";
+  filter: ~"alpha(opacity=@{ieOpacity})";
+  opacity: @opacity;
+}
+
+.hide-text {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+
+.center {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
