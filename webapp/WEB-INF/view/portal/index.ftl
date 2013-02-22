@@ -19,4 +19,4 @@
 	<@seajs config=JS_PATH + "/seaconfig.js"
 		main=JS_PATH + "/portal/index.js" />
 </@override>
-<@extends name="partials/html.ftl"/>
+<@extends name="/partials/html.ftl"/>

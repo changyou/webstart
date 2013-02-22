@@ -11,12 +11,11 @@
 
 <#-- SITE INFO -->
 <#global APP_TITLE  = "网站名称" />
-<#global STYLES_FILE_EXT = ".css" />
-<#global SCRIPT_FILE_EXT = ".js" />
 
+<#global SEAJS_FILE = APP_URL + "/js/modules/seajs/sea.js" />
 <#global SITE_STATE>
 	<!-- Site Stat -->
-	<div style="display:;">
+	<div style="display:none;">
 	<script src="http://s4.cnzz.com/stat.php?id=4802554&web_id=4802554" language="JavaScript"></script>
 	</div>
 </#global>
@@ -27,4 +26,9 @@
 	<#global DEBUG = false />
 	<#global STYLES_FILE_EXT = ".less" />
 </#if>
+<#--
+说明：
+	如果使用less.js在浏览器端编译less文件，则页面可直接引入.less文件
+	若不使用，页面可直接引入.css文件，如 xx.less ==> xx.css
+-->
 <#global USE_LESSJS = false />
