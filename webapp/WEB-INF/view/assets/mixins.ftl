@@ -1,6 +1,7 @@
 <#--
 	有关页面小组件
 -->
+<#include "/assets/version-control.ftl" />
 
 <#-- add js -->
 <#macro js file="">
@@ -9,7 +10,7 @@
 			<#nested />
 		</script>
 	<#else>
-		<script src="${file}"></script>
+		<script src="${file}?v=${ver(file)}"></script>
 	</#if>
 </#macro>
 
@@ -24,19 +25,19 @@
 			<#nested/>
 		</style>
 	<#else>
-		<link type="text/css" rel="stylesheet" href="${file}" />
+		<link type="text/css" rel="stylesheet" href="${file}?v=${ver(file)}" />
 	</#if>
 </#macro>
 
 <#-- add less -->
 <#macro less file>
-	<link type="text/less" rel="stylesheet/less" href="${file}" />
+	<link type="text/less" rel="stylesheet/less" href="${file}?v=${ver(file)}" />
 </#macro>
 
 <#-- load seajs -->
 <#macro seajs main config=JS_PATH + "/seaconfig.js">
 	<#if main==""><#return /></#if>
-	<script src="${APP_URL}/js/modules/seajs/sea.js"></script>
+	<script src="${SEAJS_FILE}?v=${ver(SEAJS_FILE)}"></script>
 	<@js file=config />
 	<#if DEBUG>
 		<!-- JUST FOR DEVELOP -->
