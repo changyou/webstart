@@ -22,7 +22,7 @@ module.exports = (grunt) ->
 			}
 		}
 		less: {
-			development: {
+			dev: {
 				files: [{
 					expand: true
 					cwd: "<%=cfg.path.src %>/css"
@@ -32,7 +32,7 @@ module.exports = (grunt) ->
 					ext: ".css"
 				}]
 			}
-			production: {
+			build: {
 				options: {
 					yuicompress: true
 				}
@@ -91,7 +91,20 @@ module.exports = (grunt) ->
 		}
 		uglify: {}
 		cssmin: {}
-		htmlmin: {}
+		htmlmin: {
+			dist: {
+				options: {
+					removeComments: true,
+					collapseWhitespace: true
+				}
+				files: [{
+					expand: true
+					cwd: "<%=cfg.path.src %>"
+					src: "**/*.html"
+					dest: "<%=cfg.path.dist"
+				}]
+			}
+		}
 		## Others
 		copy: {
 			js: {
@@ -129,7 +142,7 @@ module.exports = (grunt) ->
 					dest: "<%=cfg.path.build %>/WEB-INF/view"
 				}]
 			}
-			dist: {
+			build: {
 				files: [{
 					expand: true
 					cwd: "<%=cfg.path.build %>"
@@ -152,7 +165,7 @@ module.exports = (grunt) ->
 	grunt.registerTask 'test', ['jshint']
 	grunt.registerTask 'build', [
 		"clean:build"
-		"less:production"
+		"less:build"
 		"jshint:beforebuild"
 		"coffee"
 		"copy:js"
@@ -162,4 +175,4 @@ module.exports = (grunt) ->
 		"copy:image"
 		"copy:view"
 	]
-	grunt.registerTask 'dist', ["clean:dist", "build", "copy:dist"]
+	grunt.registerTask 'dist', ["clean:dist", "build", "copy:build"]
