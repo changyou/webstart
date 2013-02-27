@@ -2,6 +2,8 @@
 	全局设置
 -->
 
+<#include "/version.ftl" />
+
 <#-- PATHS -->
 <#global APP_URL    = "http://localhost:3000" />
 <#global CSS_PATH   = APP_URL + "/css" />
@@ -10,7 +12,7 @@
 <#global IMG_PATH   = APP_URL + "/img" />
 
 <#-- SITE INFO -->
-<#global APP_TITLE  = "网站名称" />
+<#global APP_TITLE  = sVER + "网站名称" />
 
 <#global SEAJS_FILE = APP_URL + "/js/modules/seajs/sea.js" />
 <#global SITE_STATE>
