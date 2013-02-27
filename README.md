@@ -1,24 +1,52 @@
 WEBSTART
 ========
-前端项目基础模板
+前端项目【乐园WEB服务项目】基础模板
 
-有关使用说明，请查看 [WIKI](https://github.com/changyou/webstart/wiki)
-
-## 使用步骤
+## 启动步骤
 
 1. 下载代码
-  
+
   $> git clone https://github.com/changyou/webstart.git
 
-2. 安装FED:
+2. 安装依赖
+
+  $> cd webstart
+  $> npm install
+
+3. 安装FED
 
   $> npm install -g fed
 
-3. 启动：
+4. 安装Grunt
 
-  $> cd webstart  
-  $> fedmon run ./seaconfig.js
+  $> npm install -g grunt grunt-cli
 
-4. 访问：
+5. 启动环境
+
+  $> fedmon run ./fedConfig.js
+
+6. 访问网站
 
   http://localhost:3000
+
+#### 编译发布
+
+编译主要执行的操作都定义在`./grunfile.coffee`文件里，包括：
+
+* 编译Less文件
+* 编译CoffeeScript文件
+* 压缩jpg、png图片
+* jshint代码检查
+* 相关文件拷贝
+
+**构建**
+
+  $> grunt build
+
+**发布**
+
+  $> grunt dist
+
+**其它**
+
+  $> grunt --help

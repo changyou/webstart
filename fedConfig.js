@@ -2,9 +2,9 @@ module.exports = {
 	"host": "app.changyou.com",
 	"port": "3000",
 	"path": {
-		"views": "./webapp/WEB-INF/view",
-		"backend": "./mock",
-		"public": "./webapp"
+		"views": "./src/main/view",
+		"backend": "./src/mock",
+		"public": "./src/main"
 	},
 	"globals": {
 		"DEBUG": true,
