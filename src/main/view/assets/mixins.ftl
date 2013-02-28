@@ -34,6 +34,11 @@
 	<link type="text/less" rel="stylesheet/less" href="${file}?v=${ver(file)}" />
 </#macro>
 
+<#-- add coffee -->
+<#macro coffee file>
+	<#-- TODO: ADD COFFEESCRIPT.JS SUPPORT -->
+</#macro>
+
 <#-- load seajs -->
 <#macro seajs main config=JS_PATH + "/seaconfig.js">
 	<#if main==""><#return /></#if>

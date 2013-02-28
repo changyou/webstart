@@ -1,12 +1,12 @@
 WEBSTART
 ========
-前端项目【乐园WEB服务项目】基础模板
+前端项目基础模板
 
 ## 启动步骤
 
 1. 下载代码
 
-  $> git clone https://github.com/changyou/webstart.git
+  $> git clone https://github.com/changyou/webstart.git -b withgrunt
 
 2. 安装依赖
 

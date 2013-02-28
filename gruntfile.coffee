@@ -89,7 +89,26 @@ module.exports = (grunt) ->
 				}]
 			}
 		}
-		uglify: {}
+		uglify: {
+			options: {
+				compress: true,
+				sourceMap: true,
+				# sourceMapRoot: "",
+				# sourceMappingURL:
+				# sourceMapPrefix:
+				banner: """
+/** Generate at <%= grunt.template.today("yyyy-mm-dd") %> */
+				"""
+			}
+			dist: {
+				files: [{
+					expand: true
+					cwd: "<%=cfg.path.src %>"
+					src: ["js/**/*.js", "!js/**/*.min.js", "!js/modules/**/*.js"]
+					dest: "<%=cfg.path.build %>/js"
+				}]
+			}
+		}
 		cssmin: {}
 		htmlmin: {
 			dist: {
