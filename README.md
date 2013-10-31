@@ -6,19 +6,23 @@ WEBSTART
 
 ## 使用步骤
 
-1. 下载代码
+1. 下载代码，包含基础的文档结构
   
-  $> git clone https://github.com/changyou/webstart.git
+	$> git clone https://github.com/dYb/webstart.git
 
 2. 安装FED:
 
-  $> npm install -g fed
+	$> npm install -g fed
 
 3. 启动：
 
-  $> cd webstart  
-  $> fedmon run ./seaconfig.js
+	$> cd webstart  
+	$> fed server -w ./fedConfig.json
 
 4. 访问：
 
-  http://localhost:3000
+	http://localhost:3000
+
+5. 部署 （开发时无需部署，提交svn时执行一次）
+	
+	grunt dist

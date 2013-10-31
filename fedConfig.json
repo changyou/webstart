@@ -1,0 +1,17 @@
+{
+	"server": {
+		"port": "3000",
+		"path": {
+			"view": "./frontend/src/WEB-INF/view",
+			"mock": "./mock",
+			"public": "./frontend/src/"
+		},
+		"globals": {
+			"baseUrl": "",
+			"basePath": "http://www.ijser.cn/"
+		}
+	},
+	"coffeescript": {
+		"debug": true
+	}
+}

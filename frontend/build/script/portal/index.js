@@ -1,0 +1,1 @@
+/**Generate at 2013-10-31**/(function(){define(function(require){var a;return a=require("$"),a("body").append("<h1>LOL~</h1>")})}).call(this);

@@ -1,0 +1,1 @@
+/**Generate at 2013-10-31**/(function(){seajs.config({alias:{"es5-safe":"gallery/es5-safe/0.9.3/es5-safe",json:"gallery/json/1.0.2/json",$:"jquery/jquery-1.9.1.min.js"},vars:{locale:"zh-cn"},plugins:["text","shim"],shim:{$:{exports:"jQuery"}},preload:[Function.prototype.bind?"":"es5-safe",this.JSON?"":"json"],charset:"utf-8"})}).call(this);
