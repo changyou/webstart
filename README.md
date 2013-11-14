@@ -22,3 +22,7 @@ WEBSTART
 4. 访问：
 
   http://localhost:3000
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/changyou/webstart/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
